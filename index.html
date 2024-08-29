@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <title>Happy Birthday!!! :)</title>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <!-- My Style -->
+  <link rel="stylesheet" href="./style/main.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000; /* Black background */
+      color: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .background-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0.05) 50%);
+      opacity: 0.2;
+      pointer-events: none;
+      animation: floating 10s infinite ease-in-out;
+    }
+
+    @keyframes floating {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .countdown {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff69b4; /* Pink color for the header */
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Dark text shadow for better readability */
+    }
+
+    #countdown-timer {
+      font-size: 3rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      color: #ffd700; /* Golden color for the timer */
+    }
+
+    #countdown-timer p {
+      margin: 0;
+      padding: 15px;
+      background: linear-gradient(135deg, #ffd700, #ffcc00); /* Gradient from golden to light golden */
+      border-radius: 10px;
+      color: #000; /* Black text for contrast */
+      font-size: 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Dark text shadow for readability */
+    }
+
+    .made-with-love {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #ff4500; /* OrangeRed color for "Aadil" */
+      font-style: italic;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Dark text shadow */
+    }
+
+    .made-with-love::before {
+      content: "Made with Love by ";
+      color: #ff69b4; /* Pink color for "Made with Love by" */
+    }
+
+    .made-with-love span {
+      color: #ff4500; /* OrangeRed color for "Aadil" */
+    }
+
+    .content {
+      display: none;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Background Pattern -->
+  <div class="background-pattern"></div>
+
+  <div class="countdown" id="countdown">
+    <h2>Countdown to <span style="color: #ff4500;">Esmat's</span> Birthday!</h2>
+    <div id="countdown-timer">
+      <p id="days">00</p> Days
+      <p id="hours">00</p> Hours
+      <p id="minutes">00</p> Minutes
+      <p id="seconds">00</p> Seconds
+    </div>
+    <p class="made-with-love"><span>Aadil</span></p>
+  </div>
+
+  <div class="content" id="pageContent">
+    <audio class="song" loop autoplay controls>
+      <source src="./music/hbd.mp3" type="audio/mpeg">
+      Your browser isn't invited for super fun audio time.
+    </audio>
+
+    <div class="container">
+      <div class="one">
+        <h1 class="one">
+          Hi
+          <span id="name">Esmat</span>
+        </h1>
+        <p class="two" id="greetingText">I really like your name btw!</p>
+      </div>
+
+      <div class="three">
+        <p>It's your birthday!! :D</p>
+      </div>
+
+      <div class="four">
+        <div class="text-box">
+          <p class="hbd-chatbox">
+            Happy birthday to youu!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quisquam amet ipsam vitae, voluptatum architecto aliquid id quo error tempora quos aperiam magni necessitatibus quas ut, possimus nesciunt nam ad.
+          </p>
+          <p class="fake-btn">Send</p>
+        </div>
+      </div>
+
+      <div class="five">
+        <p class="idea-1">That's what I was going to do.</p>
+        <p class="idea-2">But then I stopped.</p>
+        <p class="idea-3">
+          I realised, I wanted to do something<br>
+          <strong>special</strong>
+          .
+        </p>
+        <p class="idea-4">Because,</p>
+        <p class="idea-5">
+          You are Special
+          <span>:)</span>
+        </p>
+        <p class="idea-6">
+          <span>S</span>
+          <span>O</span>
+        </p>
+      </div>
+
+      <div class="six">
+        <img src="./img/sara.jpg" alt="Profile picture of Esmat" class="profile-picture" id="imagePath"/>
+        <img src="img/hat.svg" alt="Party hat" class="hat" />
+        <div class="wish">
+          <h3 class="wish-hbd">Happy Birthday!</h3>
+          <h5 id="wishText">May the js.prototypes always be with you! ;)</h5>
+        </div>
+      </div>
+
+      <div class="seven">
+        <div class="baloons">
+          <img src="img/ballon2.svg" alt="Balloon decoration" />
+          <!-- Add other balloon images here -->
+        </div>
+      </div>
+
+      <div class="eight">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <!-- Add other SVG circles here -->
+      </div>
+
+      <div class="nine">
+        <p>Okay, now come back and tell me if you liked it.</p>
+        <p id="replay">Or click, if you want to watch it again.</p>
+        <p class="last-smile">:)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Greensock -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <!-- Sweetalert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="application/javascript" src="./script/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const countdownElement = document.getElementById('countdown');
+      const pageContent = document.getElementById('pageContent');
+      let countdownInterval;
+
+      function updateCountdown() {
+        const now = new Date();
+        const birthday = new Date('2024-09-02T00:00:00'); // Birthday date
+        const timeDiff = birthday - now;
+
+        if (timeDiff <= 0) {
+          clearInterval(countdownInterval);
+          countdownElement.style.display = 'none';
+          pageContent.style.display = 'block';
+
+          Swal.fire({
+            title: 'The wait is over!',
+            text: 'Happy Birthday!',
+            icon: 'success',
+            confirmButtonText: 'Enjoy!',
+            allowOutsideClick: false
+          }).then(() => {
+            console.log('Countdown ended and popup closed');
+          });
+          return;
+        }
+
+        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+        document.getElementById('days').textContent = days.toString().padStart(2, '0');
+        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+      }
+
+      countdownInterval = setInterval(updateCountdown, 1000); // Update every second
+    });
+  </script>
+</body>
+
+</html>
