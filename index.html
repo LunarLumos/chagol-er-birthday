@@ -60,39 +60,41 @@
       padding: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
       position: relative;
+      max-width: 90%; /* Ensure it doesn’t overflow on smaller screens */
+      margin: auto;
     }
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 2rem; /* Adjusted font size */
       margin-bottom: 20px;
       color: #ff69b4; /* Pink color for the header */
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Dark text shadow for better readability */
     }
 
     #countdown-timer {
-      font-size: 3rem;
-      font-weight: bold;
+      font-size: 2rem; /* Adjusted font size */
       display: flex;
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
       justify-content: center;
-      gap: 15px;
+      gap: 10px; /* Reduced gap */
       margin-bottom: 20px;
       color: #ffd700; /* Golden color for the timer */
     }
 
     #countdown-timer p {
       margin: 0;
-      padding: 15px;
+      padding: 10px; /* Reduced padding */
       background: linear-gradient(135deg, #ffd700, #ffcc00); /* Gradient from golden to light golden */
       border-radius: 10px;
       color: #000; /* Black text for contrast */
-      font-size: 2rem;
+      font-size: 1.5rem; /* Adjusted font size */
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Dark text shadow for readability */
     }
 
     .made-with-love {
       margin-top: 20px;
-      font-size: 18px;
+      font-size: 16px; /* Adjusted font size */
       color: #ff4500; /* OrangeRed color for "Aadil" */
       font-style: italic;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Dark text shadow */
@@ -110,6 +112,55 @@
     .content {
       display: none;
       padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .countdown {
+        padding: 10px;
+        max-width: 95%;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      #countdown-timer {
+        font-size: 1.2rem;
+        gap: 5px;
+      }
+
+      #countdown-timer p {
+        font-size: 1rem;
+        padding: 5px;
+      }
+
+      .made-with-love {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .countdown {
+        padding: 5px;
+        max-width: 100%;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      #countdown-timer {
+        font-size: 1rem;
+      }
+
+      #countdown-timer p {
+        font-size: 0.8rem;
+        padding: 3px;
+      }
+
+      .made-with-love {
+        font-size: 12px;
+      }
     }
   </style>
 </head>
@@ -152,17 +203,17 @@
         <div class="text-box">
           <p class="hbd-chatbox">
             তোমার জন্মদিনে রাতের আকাশ যেন এক মায়ার জাল,  
-তুমি সেই চাঁদের আলো, যা স্পর্শ করে সাগরের কালো ঢেউ।  
-তোমার হাসি যেন গোধূলির শেষ রঙে মিশে থাকা এক গোপন ইশারা,  
-যা হৃদয়ের গহীন কোনে জন্ম দেয় অজানা এক আকুলতা।
+            তুমি সেই চাঁদের আলো, যা স্পর্শ করে সাগরের কালো ঢেউ।  
+            তোমার হাসি যেন গোধূলির শেষ রঙে মিশে থাকা এক গোপন ইশারা,  
+            যা হৃদয়ের গহীন কোনে জন্ম দেয় অজানা এক আকুলতা।
 
-তুমি যেন হেমন্তের ম্লান চাঁদ,  
-যার আলোয় রাত্রির সব রহস্য মিলে যায়,  
-তোমার চোখের গভীরতায় হারায় কত শত না বলা কথা,  এই নিরবতার ভাষায়। 
+            তুমি যেন হেমন্তের ম্লান চাঁদ,  
+            যার আলোয় রাত্রির সব রহস্য মিলে যায়,  
+            তোমার চোখের গভীরতায় হারায় কত শত না বলা কথা, এই নিরবতার ভাষায়। 
 
-তোমার জীবনের প্রতিটি মুহূর্ত হোক এমনই রহস্যময়,  
-শুভ জন্মদিন!  
-তোমার সাথে কাটুক প্রতিটি রাত, যেন স্বপ্নের মতো সুন্দর আর চিরকালীন মায়ায় মোড়া।
+            তোমার জীবনের প্রতিটি মুহূর্ত হোক এমনই রহস্যময়,  
+            শুভ জন্মদিন!  
+            তোমার সাথে কাটুক প্রতিটি রাত, যেন স্বপ্নের মতো সুন্দর আর চিরকালীন মায়ায় মোড়া।
           </p>
           <p class="fake-btn">Send</p>
         </div>
